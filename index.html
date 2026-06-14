@@ -293,13 +293,14 @@
     .parallax {
       max-width: 100%;
       margin: 0;
-      background-attachment: fixed;
-      background-size: cover;
+      background-attachment: scroll;
+      background-repeat: no-repeat;
+      background-size: contain;
       background-position: center;
       height: 260px;
+      background-color: #dfe7dd;
     }
     @media (max-width: 600px) {
-      /* fixed attachment doesn't work well on iOS */
       .parallax { background-attachment: scroll; }
 
       nav {
