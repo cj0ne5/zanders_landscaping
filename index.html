@@ -293,13 +293,14 @@
     .parallax {
       max-width: 100%;
       margin: 0;
-      background-attachment: fixed;
-      background-size: cover;
+      background-attachment: scroll;
+      background-repeat: no-repeat;
+      background-size: contain;
       background-position: center;
       height: 260px;
+      background-color: #dfe7dd;
     }
     @media (max-width: 600px) {
-      /* fixed attachment doesn't work well on iOS */
       .parallax { background-attachment: scroll; }
 
       nav {
@@ -772,7 +773,10 @@
         <p><strong>Service Area</strong><br>Westover &amp; East Falls Church<br>Arlington, VA</p>
       </div>
 
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="contact-form" action="https://formsubmit.co/zanderjwest@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New website inquiry from Zander's Lawn & Landscape" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
         <input type="text"  name="name"    placeholder="Your name"    required />
         <input type="email" name="email"   placeholder="Your email"   required />
         <input type="tel"   name="phone"   placeholder="Phone (optional)" />
